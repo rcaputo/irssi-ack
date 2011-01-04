@@ -43,7 +43,7 @@ sub cmd_ack {
   Irssi::windows();
 
   # Jump to the first window.  How hard can it be?
-  $windows[0]->set_active() if @windows;
+  $windows[0]->set_active() if (defined $windows[0]);
 }
 
 # Usage: /ack ... probably bind it to Meta-A or something.
